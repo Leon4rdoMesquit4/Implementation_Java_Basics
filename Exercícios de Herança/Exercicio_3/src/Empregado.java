@@ -34,6 +34,10 @@ public class Empregado extends Pessoa{
         this.imposto = imposto;
     }
 
+    public Double calcularSalario(){
+        return 0.0;
+    }
+
     @Override
     public String toString() {
         return "Empregado{" +
