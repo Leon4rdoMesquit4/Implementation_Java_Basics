@@ -21,4 +21,11 @@ public class Curso {
                 "nome='" + nome + '\'' +
                 '}');
     }
+
+    @Override
+    public String toString() {
+        return "Curso{" +
+                "nome='" + nome + '\'' +
+                '}';
+    }
 }

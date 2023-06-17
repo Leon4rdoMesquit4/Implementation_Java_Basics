@@ -41,11 +41,7 @@ public class Aluno extends Pessoa{
     }
 
     public void imprimir(){
-        System.out.println("Aluno{" +
-                "nome='" + getNome() + '\'' +
-                ", cpf='" + getCpf() + '\'' +
-                ", email='" + getEmail() + '\'' +
-                ", endereco=" + getEndereco() +
+        System.out.println("Aluno: " + super.toString() +
                 "curso=" + curso.getNome() +
                 ", notas=" + notas +
                 '}');

@@ -42,4 +42,13 @@ public class Telefone {
                 ", numero = '" + numero + '\'' +
                 '}');
     }
+
+    @Override
+    public String toString() {
+        return "Telefone{" +
+                "tipo='" + tipo + '\'' +
+                ", ddd='" + ddd + '\'' +
+                ", numero='" + numero + '\'' +
+                '}';
+    }
 }

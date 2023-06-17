@@ -34,12 +34,8 @@ public class Professor extends Pessoa{
         this.salario = salario;
     }
 
-    public String getCursos() {
-        StringBuilder temporario = new StringBuilder();
-        for (Curso curso : cursos) {
-            temporario.append(curso.getNome()).append(" ");
-        }
-        return temporario.toString();
+    public ArrayList<Curso> getCursos() {
+        return cursos;
     }
 
     public void setCursos(Curso curso) {
@@ -47,14 +43,14 @@ public class Professor extends Pessoa{
     }
 
     public void imprimir() {
-        System.out.println("Pessoa{" +
-                "nome='" + getNome() + '\'' +
-                ", cpf='" + getCpf() + '\'' +
-                ", email='" + getEmail() + '\'' +
-                ", endereco=" + getEndereco() +
-                "titulacao='" + titulacao + '\'' +
-                ", salario=" + salario +
-                ", cursos=" + getCursos() +
+        StringBuilder cur = new StringBuilder();
+        for (Curso cr: cursos) {
+            cur.append(cr.toString());
+        }
+        System.out.println( "Professor: " + super.toString() +
+                "titulacao='" + getTitulacao() + '\'' +
+                ", salario=" + getSalario() +
+                ", cursos=" + cur +
                 '}' + '}');
     }
 

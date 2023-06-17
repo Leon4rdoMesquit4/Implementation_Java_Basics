@@ -55,5 +55,7 @@ public class Main {
                 telefonesProfessor, endereco2, "Mestre", 23945.43, cursosProfessor);
         professor1.imprimir();
         System.out.println(aluno1.calcularMedia());
+
+        aluno1.imprimir();
     }
 }

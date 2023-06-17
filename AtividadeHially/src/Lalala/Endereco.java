@@ -43,5 +43,12 @@ public class Endereco {
                 '}');
     }
 
-
+    @Override
+    public String toString() {
+        return
+                "rua='" + rua + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", estado='" + estado + '\'' +
+                '}';
+    }
 }

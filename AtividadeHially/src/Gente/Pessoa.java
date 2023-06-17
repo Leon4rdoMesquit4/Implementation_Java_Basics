@@ -45,8 +45,8 @@ public class Pessoa {
         this.email = email;
     }
 
-    public String getEndereco() {
-        return endereco.toString();
+    public Endereco getEndereco() {
+        return endereco;
     }
 
     public void setEndereco(Endereco endereco) {
@@ -61,12 +61,28 @@ public class Pessoa {
         this.telefones.add(telefone);
     }
 
+
     public void imprimir() {
+        StringBuilder tel = new StringBuilder();
+        for (Telefone telefone : telefones) {
+            tel.append(telefone.toString());
+        }
+
         System.out.println("Pessoa{" +
-                "nome='" + nome + '\'' +
+                "nome='" + getNome() + '\'' +
+                ", cpf='" + getCpf() + '\'' +
+                ", email='" + getEmail() + '\'' +
+                ", endereco=" + getEndereco().toString() +
+                ", telefones=" + tel + '}');
+    }
+
+    @Override
+    public String toString() {
+        return "nome='" + nome + '\'' +
                 ", cpf='" + cpf + '\'' +
                 ", email='" + email + '\'' +
+                ", telefones=" + telefones +
                 ", endereco=" + endereco +
-                '}');
+                '}';
     }
 }
