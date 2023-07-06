@@ -3,6 +3,10 @@ package polimorfismo2;
 public class Carro extends Veiculos{
     private double km;
 
+    public  Carro(){
+
+    }
+
     public Carro(double km, String modelo, double preco) {
         super(modelo, preco);
         this.km = km;
@@ -18,9 +22,19 @@ public class Carro extends Veiculos{
     
     public double getPreco(){
         if(km > 100000){
-            return getPreco()* 0.92;
+            return preco * 0.92;
         } else {
-            return getPreco();
+            return preco;
         }
+    }
+
+    public void insertData(int ano, String modelo, double km){
+        setModelo(modelo);
+        setPreco(preco);
+        this.km = km;
+    }
+
+    public void printDados(){
+        System.out.println(getModelo() + ", " + getPreco() + ", " + getKm());
     }
 }

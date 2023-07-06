@@ -1,7 +1,13 @@
 package polimorfismo2;
 
+import java.util.Scanner;
+
 public class Moto extends Veiculos{
     private int ano;
+
+    public Moto(){
+
+    }
 
     public Moto(int ano, String modelo, double preco) {
         super(modelo, preco);
@@ -11,9 +17,9 @@ public class Moto extends Veiculos{
     @Override
     public double getPreco(){
         if (ano >= 2008){
-            return getPreco() * 1.1;
+            return preco * 1.1;
         } else {
-            return getPreco();
+            return preco;
         }
     }
     
@@ -25,6 +31,14 @@ public class Moto extends Veiculos{
         this.ano = ano;
     }
 
-    
+    public void insertData(int ano, String modelo, double preco){
+        setModelo(modelo);
+        setPreco(preco);
+        this.ano = ano;
+    }
+
+    public void printDados(){
+        System.out.println(getModelo() + ", " + getPreco() + ", " + getAno());
+    }
     
 }

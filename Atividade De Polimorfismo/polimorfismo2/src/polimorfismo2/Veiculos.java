@@ -2,11 +2,15 @@ package polimorfismo2;
 
 public class Veiculos {
     private String modelo;
-    private double preco;
+    protected double preco;
 
     public Veiculos(String modelo, double preco) {
         this.modelo = modelo;
         this.preco = preco;
+    }
+
+    public Veiculos() {
+
     }
 
     public String getModelo() {
